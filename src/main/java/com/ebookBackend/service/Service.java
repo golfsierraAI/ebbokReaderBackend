@@ -11,11 +11,11 @@ public class Service {
     private Cloudinary cloudinaryConfigx;
 
     public ApiResponse post() throws Exception {
-        return cloudinaryConfigx.api().resources(ObjectUtils.asMap("resource_type", "raw"));
+        return cloudinaryConfigx.api().resources(ObjectUtils.asMap("resource_type", "raw" ,"max_results",100));
     }
 
     public ApiResponse getImages() throws Exception {
-        return cloudinaryConfigx.api().resources(ObjectUtils.asMap("resource_type", "image"));
+        return cloudinaryConfigx.api().resources(ObjectUtils.asMap("resource_type", "image","max_results",100));
     }
 
 
